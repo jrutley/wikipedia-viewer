@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Jeramy Rutley</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="wikiApp">
+  <div class="jumbotron text-center">
+    <h1>Wikipedia</h1>
+    <div>
+      <input type="text" placeholder="Enter a search term" size="50" @keyup.enter="searchWikipedia" v-model="searchTerm">
+        <button v-on:click="searchWikipedia" class="btn btn-danger">Search!</button>
+      </input>
+    </div>
+    <div>
+      <a href="https://en.wikipedia.org/wiki/Special:Random" class="btn btn-danger" target="_blank">I'm feeling lucky!</a>
+    </div>
+  </div>
+  <div class="container">
+    <todo-item v-for="item in items" v-bind:article="item"></todo-item>
+  </div>
+</div>
+  <script src='https://unpkg.com/vue/dist/vue.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
